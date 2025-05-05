@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="animation.css" />
+</head>
+<body>
+  <!-- Vertical Button Layout -->
+  <div class="side-nav">
+    <a href="#home" class="side-btn">Home</a>
+    <a href="#about" class="side-btn">About</a>
+    <a href="#skills" class="side-btn">Skills</a>
+    <a href="#contact" class="side-btn">Contact</a>
+  </div>
+
+  <!-- Personal Info (name, title, etc.) -->
+  <div class="personal-info">
+    <h1>Khushal Navle</h1>
+    <h2>Software & Web Developer</h2>
+  </div>
+
+  <!-- Live Time (fixed position) -->
+  <div class="live-time">
+    <div id="live-time"></div>
+    <div id="live-date"></div>
+  </div>
+
+  <!-- Sections -->
+  <section id="home">
+    <div class="home-content">
+      <div class="logo-container">
+        <svg id="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+          <path d="M415.44 512h-95.11L212.12 357.46v91.1L125.69 512H28V29.82L68.47 0h108.05l123.74 176.13V63.45L386.69 0h97.69v461.5zM38.77 35.27V496l72-52.88V194l215.5 307.64h84.79l52.35-38.17h-78.27L69 13zm82.54 466.61l80-58.78v-101l-79.76-114.4v220.94L49 501.89h72.34zM80.63 10.77l310.6 442.57h82.37V10.77h-79.75v317.56L170.91 10.77zM311 191.65l72 102.81V15.93l-72 53v122.72z"/>
+        </svg>
+      </div>
+
+      <div class="personal-info">
+        <h1>Khushal Navle</h1>
+        <h2>Software & Web Developer</h2>
+      </div>
+
+      <div class="live-time">
+        <div id="live-time"></div>
+        <div id="live-date"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="about-content">
+      <div class="photo photo-left">
+        <img src="img/Main.jpg" alt="Left Photo">
+      </div>
+      
+      <div class="photo photo-center">
+        <img src="img/Thailand.jpg" alt="Center Photo">        
+      </div>
+
+      <div class="photo photo-right">
+        <img src="img/Goa.jpg" alt="Right Photo">        
+      </div>
+
+      <h3>Hi, I'm Khushal — a meticulous and forward-thinking full-stack web & Android developer, passionate about crafting immersive, user-focused digital experiences that blend functionality with finesse.</h3>
+      <h4>Currently in the final year of my Bachelor of Computing Systems, I specialize in building scalable, high-performance applications enriched with fluid animations and modern, intuitive interfaces.</h4>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="skills-bar-container">
+      <div class="skills-bar box-1">
+        <ul>
+          <li>HTML5</li>
+          <li>CSS3 / SCSS</li>
+          <li>JavaScript (ES6+)</li>
+          <li>TypeScript</li>
+          <li>Java</li>
+          <li>Python</li>
+        </ul>
+      </div>
+  
+      <div class="skills-bar box-2">
+        <ul>
+          <li>React.js</li>
+          <li>Node.js</li>
+          <li>Express.js</li>
+          <li>Tailwind CSS</li>
+          <li>Bootstrap</li>
+          <li>Next.js</li>
+        </ul>
+      </div>
+  
+      <div class="skills-bar box-3">
+        <ul>
+          <li>Git & GitHub</li>
+          <li>VS Code</li>
+          <li>Postman</li>
+          <li>Docker</li>
+          <li>MongoDB</li>
+          <li>MySQL</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  
+  <section id="contact">
+    <div class="contact-container">
+      
+      <!-- Left Side -->
+      <div class="contact-left">
+        <div class="contact-text">
+          <h2>Ideas Are Shooting Stars ✨ Let’s Catch Them</h2>
+          <p>Got a spark of inspiration? A dream drifting through the cosmos? Send it my way I’ll turn it into a masterpiece brighter than a supernova! 🚀🌟</p>
+        </div>
+
+        <div class="contact-left">
+          <!-- Social Text Box -->
+          <div class="social-text-box">
+            <h3>Social</h3>
+          </div>
+        
+          <!-- Instagram Icon -->
+          <div class="social-instagram">
+            <a href="https://instagram.com/yourusername" target="_blank">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        
+          <!-- Facebook Icon -->
+          <div class="social-facebook">
+            <a href="https://facebook.com/yourusername" target="_blank">
+              <i class="fab fa-facebook"></i>
+            </a>
+          </div>
+        </div>
+        
+  
+        <div class="contact-icons">
+          <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="mailto:youremail@example.com"><i class="fas fa-envelope"></i></a>
+          <a href="https://discord.com/users/yourdiscordid" target="_blank"><i class="fab fa-discord"></i></a>
+        </div>
+      </div>
+  
+      <!-- Right Side -->
+      <div class="contact-right">
+        <img src="img/Contact.jpg" alt="Your Photo">
+      </div>
+
+  
+    </div>
+  
+  </section>
+
+  <script src="main.js"></script>
+</body>
+</html>

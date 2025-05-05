@@ -1,0 +1,425 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
+
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Roboto', 'Open Sans', 'Lato', 'Montserrat', 'Poppins', 'Inter', sans-serif;
+    background: #f5f5f5;
+    color: #333;
+    scroll-behavior: smooth;
+  }
+
+  /* Full-Screen Section Styling */
+  section {
+    height: 100vh; /* full screen */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(1.5rem, 5vw, 3rem); /* responsive font */
+    text-align: center;
+    padding: 1rem;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  /* Vertical Button Layout on Left Side */
+  .side-nav {
+    position: fixed;
+    left: 10px;
+    top: 2%;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+  }
+  
+  .side-btn {
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    font-size: 15px;
+    font-family: 'Nunito', sans-serif;
+    text-align: left;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.5s ease;
+  }
+  
+  .side-btn:hover {
+    background-color: #939393;
+  }
+  
+  /* Personal Info Styles */
+  .personal-info {
+    position: absolute;
+    top: 10px;
+    right: 175px;
+    text-align: right;
+    font-family: 'Nunito', sans-serif;
+  }
+  
+  
+  .personal-info h1 {
+    font-size: 1.2rem;
+    font-weight: 100;
+    color: #333;
+  }
+  
+  .personal-info h2 {
+    font-size: 0.8rem;
+    font-weight: 50;
+    color: #777;
+  }
+  
+  /* Live Time Styles */
+  .live-time {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    text-align: left;
+    font-family: 'Nunito', sans-serif;
+  }
+  
+  #live-time {
+    font-size: 1.2rem;
+    font-weight: 100;
+    color: #333;
+  }
+  
+  #live-date {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #777;
+  }
+
+  .home-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+
+  #home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+  }
+  
+  .logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+/* About Section Styling */
+
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-direction: column; /* Stack photos and text vertically */
+}
+
+/* Left Photo Styling */
+.photo-left {
+  width: 125px;
+  height: auto;
+  overflow: hidden;
+  position: absolute;
+  top: var(--left-photo-top, -225px); /* Customizable top position */
+  left: var(--left-photo-left, -350px); /* Customizable left position */
+}
+
+.photo-left img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 2px;
+  object-fit: cover;
+}
+
+.photo-center {
+  width: 275px;
+  height: auto;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: var(--center-photo-top, 10); /* Customizable top position */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+
+.photo-center img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0px;
+  object-fit: cover;
+}
+
+/* Right Photo Styling */
+.photo-right {
+  width: 125px;
+  height: auto;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  bottom: var(--right-photo-bottom, -225px); /* Customizable bottom position */
+  right: var(--right-photo-right, -350px); /* Customizable right position */
+}
+
+.photo-right img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0px;
+  object-fit: cover;
+}
+
+h3, h4 {
+  position: absolute;
+  font-size: 1rem;
+  font-weight: 100;
+  color: #333;
+  font-family: 'Nunito', sans-serif;
+  width: 350px;           /* Set a fixed width */
+  line-height: 1.4;
+  word-wrap: break-word;
+  white-space: normal;    /* Make sure text wraps normally */
+}
+
+h3 {
+  top: -100px;
+  left: 225px;
+  text-align: left;
+}
+
+h4 {
+  top: -10px;
+  right: 225px;
+  text-align: right;
+}
+
+/* Skills Section Container */
+#skills {
+  font-family: 'Nunito', sans-serif;
+  text-align: center; /* Change this to left, right, or justify for different text alignment */
+}
+
+/* Container for Skill Bars (Horizontal Layout) */
+.skills-bar-container {
+  display: flex;
+  justify-content: space-evenly; /* Space between the boxes. Change to 'center', 'flex-start', or 'flex-end' for different alignments */
+  gap: 3rem; /* Controls the space between each box. Adjust this for tighter or looser spacing */
+  flex-wrap: wrap; /* Ensures boxes wrap when space is insufficient (like on smaller screens) */
+  position: relative; /* This enables absolute positioning inside each box */
+}
+
+/* Base Style for Skill Box (applies to all) */
+.skills-bar {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 5px;
+  margin: 1px;
+  position: absolute;
+
+  display: flex;
+  flex-direction: column;       /* Stack content vertically */
+  justify-content: center;      /* Center vertically */
+  align-items: center;          /* Center horizontally */
+  text-align: center;
+
+  height: 200px;                /* You can adjust as needed */
+  min-height: 75px;
+  max-height: 400px;
+  width: 100%;
+}
+
+
+/* Custom classes for each individual box, so you can change size and position independently */
+
+/* Box 1 - Frontend */
+.skills-bar.box-1 {
+  flex: 1 1 20%; /* Adjust the width of the box (20% width) */
+  max-width: 100px; /* Maximum width for box 1 */
+  min-width: 900px; /* Minimum width for box 1 */
+  background-color: #e0e0e0; /* Example color */
+  top: -200px; /* Move box 1 down from the top */
+  left: -450px; /* Move box 1 from the left side */
+  height: 75px;
+}
+
+/* Box 2 - Backend */
+.skills-bar.box-2 {
+  flex: 1 1 20%; /* Adjust the width of the box (20% width) */
+  max-width: 100px; /* Maximum width for box 2 */
+  min-width: 900px; /* Minimum width for box 2 */
+  background-color: #e0e0e0; /* Example color */
+  top: -50px; /* Move box 2 down from the top */
+  left: -450px; /* Move box 2 from the left (centered) */
+  height: 75px;
+}
+
+/* Box 3 - Tools */
+.skills-bar.box-3 {
+  flex: 1 1 20%; /* Adjust the width of the box (20% width) */
+  max-width: 100px; /* Maximum width for box 3 */
+  min-width: 900px; /* Minimum width for box 3 */
+  background-color: #e0e0e0; /* Example color */
+  height: 75px;
+  top: 100px; /* Move box 3 down from the top */
+  left: -450px; /* Move box 3 from the right side */
+}
+
+.skills-bar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;       /* Stack skills vertically */
+  gap: 0.3rem;
+}
+
+.skills-bar ul li {
+  font-size: 1.2rem;
+  margin: 0;
+  text-align: center;
+}
+#contact {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(1.5rem, 5vw, 3rem);
+  text-align: center;
+  padding: 2rem;
+  border-bottom: 1px solid #ccc;
+  background-color: #f5f5f5;
+  font-family: 'Nunito', sans-serif;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+  width: 100%;
+  max-width: 1200px;
+  flex-wrap: wrap;
+}
+
+.contact-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  align-items: flex-start;
+  padding-left: 2rem;
+}
+
+.contact-text {
+  position: relative;
+  top: 30px;
+  left: 200px;
+  font-size: 1.2rem;
+  font-weight: 100;
+  color: #333;
+  margin-top: 2rem;
+  text-align: right;
+  max-width: 400px;
+}
+
+.contact-text h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.contact-text p {
+  font-size: 1rem;
+  font-weight: 100;
+  color: #555;
+}
+
+.contact-icons {
+  display: flex;
+  position: relative;
+  top: -30px;
+  left: 450px;
+  gap: 1.3rem;
+  margin-top: 300px;
+  padding-bottom: 2rem;
+}
+
+.contact-icons a {
+  font-size: 1.3rem;
+  color: #707070;
+  transition: color 0.3s ease;
+}
+
+.contact-icons a:hover {
+  color: #000;
+}
+
+.contact-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-right img {
+  width: 350px;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.social-text-box {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.2rem;
+  color: #707070;
+  position: relative;
+  top: 400px;
+  left: -200px;
+}
+
+.social-instagram,
+.social-facebook {
+  position: relative;
+  top: 20px;
+  font-size: 1.3rem;
+}
+
+.social-instagram {
+  left: 25px; /* Adjust for Instagram icon position */
+  top: 325px;
+}
+
+.social-facebook {
+  left: 60px; /* Adjust for Facebook icon position */
+  top: 297px;
+}
+
+.social-instagram a,
+.social-facebook a {
+  color: #707070;
+  transition: color 0.3s;
+}
+
+.social-instagram a:hover,
+.social-facebook a:hover {
+  color: #000;
+}
