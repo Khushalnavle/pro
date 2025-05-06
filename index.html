@@ -3,13 +3,45 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <title>My Portfolio</title>
+
+  <!-- External Libraries -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="intro.css" id="intro-css"/>
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="animation.css" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Bigilla&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barracuda&display=swap" rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 </head>
 <body>
-  <!-- Vertical Button Layout -->
+
+  <!-- Intro Animation Screen -->
+  <div id="intro-screen">
+    <div class="container">
+      <h1 class="header">
+        23F * 734 <br />&nbsp;&nbsp; (8) &.09 <br />0x2_ U3
+      </h1>
+      <div class="titles">
+        <div class="title title-1"><h1>Make</h1></div>
+        <div class="title title-2"><h1>A</h1></div>
+        <div class="title title-3"><h1>Difference</h1></div>
+      </div>
+      <ul class="blocks">
+        <li class="block-1 block"></li>
+        <li class="block-2 block"></li>
+        <li class="block-3 block"></li>
+        <li class="block-4 block"></li>
+        <li class="block-5 block"></li>
+        <li class="block-6 block"></li>
+      </ul>
+    </div>
+  </div>
+<main id="main-content" style="display: none;">
+  <!-- Main Navigation -->
   <div class="side-nav">
     <a href="#home" class="side-btn">Home</a>
     <a href="#about" class="side-btn">About</a>
@@ -17,13 +49,13 @@
     <a href="#contact" class="side-btn">Contact</a>
   </div>
 
-  <!-- Personal Info (name, title, etc.) -->
+  <!-- Personal Info -->
   <div class="personal-info">
     <h1>Khushal Navle</h1>
     <h2>Software & Web Developer</h2>
   </div>
 
-  <!-- Live Time (fixed position) -->
+  <!-- Live Time and Date -->
   <div class="live-time">
     <div id="live-time"></div>
     <div id="live-date"></div>
@@ -33,19 +65,10 @@
   <section id="home">
     <div class="home-content">
       <div class="logo-container">
+        <!-- SVG Logo -->
         <svg id="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
           <path d="M415.44 512h-95.11L212.12 357.46v91.1L125.69 512H28V29.82L68.47 0h108.05l123.74 176.13V63.45L386.69 0h97.69v461.5zM38.77 35.27V496l72-52.88V194l215.5 307.64h84.79l52.35-38.17h-78.27L69 13zm82.54 466.61l80-58.78v-101l-79.76-114.4v220.94L49 501.89h72.34zM80.63 10.77l310.6 442.57h82.37V10.77h-79.75v317.56L170.91 10.77zM311 191.65l72 102.81V15.93l-72 53v122.72z"/>
         </svg>
-      </div>
-
-      <div class="personal-info">
-        <h1>Khushal Navle</h1>
-        <h2>Software & Web Developer</h2>
-      </div>
-
-      <div class="live-time">
-        <div id="live-time"></div>
-        <div id="live-date"></div>
       </div>
     </div>
   </section>
@@ -55,89 +78,52 @@
       <div class="photo photo-left">
         <img src="img/Main.jpg" alt="Left Photo">
       </div>
-      
       <div class="photo photo-center">
-        <img src="img/Thailand.jpg" alt="Center Photo">        
+        <img src="img/Thailand.jpg" alt="Center Photo">
       </div>
-
       <div class="photo photo-right">
-        <img src="img/Goa.jpg" alt="Right Photo">        
+        <img src="img/Goa.jpg" alt="Right Photo">
       </div>
-
-      <h3>Hi, I'm Khushal — a meticulous and forward-thinking full-stack web & Android developer, passionate about crafting immersive, user-focused digital experiences that blend functionality with finesse.</h3>
-      <h4>Currently in the final year of my Bachelor of Computing Systems, I specialize in building scalable, high-performance applications enriched with fluid animations and modern, intuitive interfaces.</h4>
+      <h3>Hi, I'm Khushal — a meticulous and forward-thinking full-stack web & Android developer...</h3>
+      <h4>Currently in the final year of my Bachelor of Computing Systems...</h4>
     </div>
   </section>
 
   <section id="skills">
     <div class="skills-bar-container">
+      <!-- Skills Listed -->
       <div class="skills-bar box-1">
         <ul>
-          <li>HTML5</li>
-          <li>CSS3 / SCSS</li>
-          <li>JavaScript (ES6+)</li>
-          <li>TypeScript</li>
-          <li>Java</li>
-          <li>Python</li>
+          <li>HTML5</li><li>CSS3 / SCSS</li><li>JavaScript (ES6+)</li><li>TypeScript</li><li>Java</li><li>Python</li>
         </ul>
       </div>
-  
       <div class="skills-bar box-2">
         <ul>
-          <li>React.js</li>
-          <li>Node.js</li>
-          <li>Express.js</li>
-          <li>Tailwind CSS</li>
-          <li>Bootstrap</li>
-          <li>Next.js</li>
+          <li>React.js</li><li>Node.js</li><li>Express.js</li><li>Tailwind CSS</li><li>Bootstrap</li><li>Next.js</li>
         </ul>
       </div>
-  
       <div class="skills-bar box-3">
         <ul>
-          <li>Git & GitHub</li>
-          <li>VS Code</li>
-          <li>Postman</li>
-          <li>Docker</li>
-          <li>MongoDB</li>
-          <li>MySQL</li>
+          <li>Git & GitHub</li><li>VS Code</li><li>Postman</li><li>Docker</li><li>MongoDB</li><li>MySQL</li>
         </ul>
       </div>
     </div>
   </section>
-  
+
   <section id="contact">
     <div class="contact-container">
-      
-      <!-- Left Side -->
       <div class="contact-left">
         <div class="contact-text">
           <h2>Ideas Are Shooting Stars ✨ Let’s Catch Them</h2>
-          <p>Got a spark of inspiration? A dream drifting through the cosmos? Send it my way I’ll turn it into a masterpiece brighter than a supernova! 🚀🌟</p>
+          <p>Got a spark of inspiration?... brighter than a supernova! 🚀🌟</p>
         </div>
-
-        <div class="contact-left">
-          <!-- Social Text Box -->
-          <div class="social-text-box">
-            <h3>Social</h3>
-          </div>
-        
-          <!-- Instagram Icon -->
-          <div class="social-instagram">
-            <a href="https://www.instagram.com/khushal__3?igsh=Zm1kZ283d2hsaDhi&utm_source=qr" target="_blank">
-              <i class="fab fa-instagram"></i>
-            </a>
-          </div>
-        
-          <!-- Facebook Icon -->
-          <div class="social-facebook">
-            <a href="https://www.facebook.com/share/1BM2WQ8Pkd/?mibextid=wwXIfr" target="_blank">
-              <i class="fab fa-facebook"></i>
-            </a>
-          </div>
+        <div class="social-text-box"><h3>Social</h3></div>
+        <div class="social-instagram">
+          <a href="https://www.instagram.com/khushal__3" target="_blank"><i class="fab fa-instagram"></i></a>
         </div>
-        
-  
+        <div class="social-facebook">
+          <a href="https://www.facebook.com/share/1BM2WQ8Pkd/" target="_blank"><i class="fab fa-facebook"></i></a>
+        </div>
         <div class="contact-icons">
           <a href="https://github.com/Khushalnavle" target="_blank"><i class="fab fa-github"></i></a>
           <a href="https://www.linkedin.com/in/khushal-navle-9b849a2ba/" target="_blank"><i class="fab fa-linkedin"></i></a>
@@ -145,17 +131,51 @@
           <a href="https://discord.com/users/khushalezh" target="_blank"><i class="fab fa-discord"></i></a>
         </div>
       </div>
-  
-      <!-- Right Side -->
       <div class="contact-right">
-        <img src="img/Contact.jpg" alt="Your Photo">
+        <img src="img/Contact.jpg" alt="Contact Image" />
       </div>
-
-  
     </div>
-  
   </section>
+</main>
+  <!-- Intro Animation Script -->
+  <script>
+    TweenMax.staggerFrom(".titles > div", 0.8, { x: "-60", ease: Power3.easeInOut, opacity: "0" }, 2);
+    TweenMax.staggerTo(".titles > div", 0.8, { x: "60", ease: Power3.easeInOut, delay: 1.2, opacity: "0" }, 2);
+    TweenMax.staggerFrom("li", 3, { x: "-1600", delay: 4.2, ease: Expo.easeInOut }, 0.16);
+    TweenMax.staggerTo("li", 2.6, { x: "1600", delay: 6.8, ease: Expo.easeInOut }, 0.2);
 
-  <script src="main.js"></script>
+    var textWrapper = document.querySelector(".header");
+    textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+    anime.timeline().add({
+      targets: ".header .letter",
+      opacity: [0, 1],
+      translateY: [80, 0],
+      easing: "easeOutExpo",
+      duration: 2000,
+      delay: (el, i) => 8400 + 40 * i,
+    });
+  </script>
+
+  <!-- Live Time Script -->
+  <script>
+setTimeout(() => {
+  const introScreen = document.getElementById('intro-screen');
+  const main = document.getElementById('main-content');
+  
+  // Fade out the intro
+  introScreen.style.transition = 'opacity 1.2s ease';
+  introScreen.style.opacity = '0';
+
+  // After fade completes, hide intro and show main
+  setTimeout(() => {
+    introScreen.style.display = 'none';
+    main.style.display = 'block';              // ✅ Show main content
+    document.body.style.overflow = 'auto';     // ✅ Enable scroll
+    document.body.style.background = '#f5f5f5';// Optional: match background
+  }, 1200); // Match fade duration
+}, 11000); // Wait until all intro animations are done
+
+  </script>
+
 </body>
 </html>
