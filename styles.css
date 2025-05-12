@@ -107,7 +107,7 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: #f5f5f5;
+    background-color: #000000;
   }
   
   .logo-container {
@@ -118,6 +118,10 @@
   }
   
 /* About Section Styling */
+
+#about {
+  background-color: #1a1a2e; /* Midnight Blue */
+}
 
 .about-content {
   display: flex;
@@ -212,7 +216,7 @@ h4 {
 /* Skills Section Container */
 #skills {
   font-family: 'Nunito', sans-serif;
-  text-align: center; /* Change this to left, right, or justify for different text alignment */
+  background-color: #16213e; /* Navy Blue */
 }
 
 /* Container for Skill Bars (Horizontal Layout) */
@@ -226,11 +230,11 @@ h4 {
 
 /* Base Style for Skill Box (applies to all) */
 .skills-bar {
-  background-color: #fff;
+  background-color: #000000;
   padding: 1rem;
   border-radius: 5px;
   margin: 1px;
-  position: absolute;
+  position: absolute; 
 
   display: flex;
   flex-direction: column;       /* Stack content vertically */
@@ -244,6 +248,13 @@ h4 {
   width: 100%;
 }
 
+/* Text customization */
+.skill-text {
+  position: absolute;
+  font-size: 1.2rem;
+  font-family: 'Nunito', sans-serif;
+  color: #fff;
+}
 
 /* Custom classes for each individual box, so you can change size and position independently */
 
@@ -252,7 +263,7 @@ h4 {
   flex: 1 1 20%; /* Adjust the width of the box (20% width) */
   max-width: 100px; /* Maximum width for box 1 */
   min-width: 900px; /* Minimum width for box 1 */
-  background-color: #e0e0e0; /* Example color */
+  background-color: #000000; /* Example color */
   top: -200px; /* Move box 1 down from the top */
   left: -450px; /* Move box 1 from the left side */
   height: 75px;
@@ -263,7 +274,7 @@ h4 {
   flex: 1 1 20%; /* Adjust the width of the box (20% width) */
   max-width: 100px; /* Maximum width for box 2 */
   min-width: 900px; /* Minimum width for box 2 */
-  background-color: #e0e0e0; /* Example color */
+  background-color: #000000; /* Example color */
   top: -50px; /* Move box 2 down from the top */
   left: -450px; /* Move box 2 from the left (centered) */
   height: 75px;
@@ -274,7 +285,7 @@ h4 {
   flex: 1 1 20%; /* Adjust the width of the box (20% width) */
   max-width: 100px; /* Maximum width for box 3 */
   min-width: 900px; /* Minimum width for box 3 */
-  background-color: #e0e0e0; /* Example color */
+  background-color: #000000; /* Example color */
   height: 75px;
   top: 100px; /* Move box 3 down from the top */
   left: -450px; /* Move box 3 from the right side */
@@ -294,7 +305,7 @@ h4 {
   margin: 0;
   text-align: center;
 }
-#contact {
+#contact {  
   height: 100vh;
   display: flex;
   align-items: center;
@@ -303,7 +314,7 @@ h4 {
   text-align: center;
   padding: 2rem;
   border-bottom: 1px solid #ccc;
-  background-color: #f5f5f5;
+  background-color: #222831; /* Charcoal */
   font-family: 'Nunito', sans-serif;
 }
 
@@ -333,7 +344,7 @@ h4 {
   left: 200px;
   font-size: 1.2rem;
   font-weight: 100;
-  color: #333;
+  color: #f0f0f0;
   margin-top: 2rem;
   text-align: right;
   max-width: 400px;
