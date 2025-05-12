@@ -1,10 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> ea5e4ee3ac12521772aa98941901751f596cc8de
 /* General Reset */
 * {
     margin: 0;
@@ -14,13 +9,8 @@
 
   body {
     font-family: 'Roboto', 'Open Sans', 'Lato', 'Montserrat', 'Poppins', 'Inter', sans-serif;
-<<<<<<< HEAD
     background: #f5f5f5;
-    color: #333;
-=======
-    background: #000000;
-    color: #ffffff;
->>>>>>> ea5e4ee3ac12521772aa98941901751f596cc8de
+    color: #d3d3d3;
     scroll-behavior: smooth;
   }
 
@@ -95,21 +85,13 @@
   #live-time {
     font-size: 1.2rem;
     font-weight: 100;
-<<<<<<< HEAD
     color: #ffffff;
-=======
-    color: #333;
->>>>>>> ea5e4ee3ac12521772aa98941901751f596cc8de
   }
   
   #live-date {
     font-size: 0.8rem;
     font-weight: 500;
-<<<<<<< HEAD
     color: #cccccc;
-=======
-    color: #777;
->>>>>>> ea5e4ee3ac12521772aa98941901751f596cc8de
   }
 
   .home-content {
@@ -125,7 +107,7 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: #000000;
+    background-color: #d3d3d3;
   }
   
   .logo-container {
@@ -138,7 +120,7 @@
 /* About Section Styling */
 
 #about {
-  background-color: #1a1a2e; /* Midnight Blue */
+  background-color: #d3d3d3; /* Midnight Blue */
 }
 
 .about-content {
@@ -151,12 +133,12 @@
 
 /* Left Photo Styling */
 .photo-left {
-  width: 125px;
+  width: 175px;
   height: auto;
   overflow: hidden;
   position: absolute;
-  top: var(--left-photo-top, -225px); /* Customizable top position */
-  left: var(--left-photo-left, -350px); /* Customizable left position */
+  top: var(--left-photo-top, -300px); /* Customizable top position */
+  left: var(--left-photo-left, -450px); /* Customizable left position */
 }
 
 .photo-left img {
@@ -168,7 +150,7 @@
 }
 
 .photo-center {
-  width: 275px;
+  width: 375px;
   height: auto;
   overflow: hidden;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
@@ -190,13 +172,13 @@
 
 /* Right Photo Styling */
 .photo-right {
-  width: 125px;
+  width: 175px;
   height: auto;
   overflow: hidden;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   position: absolute;
-  bottom: var(--right-photo-bottom, -225px); /* Customizable bottom position */
-  right: var(--right-photo-right, -350px); /* Customizable right position */
+  bottom: var(--right-photo-bottom, -300px); /* Customizable bottom position */
+  right: var(--right-photo-right, -450px); /* Customizable right position */
 }
 
 .photo-right img {
@@ -209,18 +191,18 @@
 
 h3, h4 {
   position: absolute;
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: 100;
   color: #333;
   font-family: 'Nunito', sans-serif;
-  width: 350px;           /* Set a fixed width */
+  width: 450px;           /* Set a fixed width */
   line-height: 1.4;
   word-wrap: break-word;
   white-space: normal;    /* Make sure text wraps normally */
 }
 
 h3 {
-  top: -100px;
+  top: -190px;
   left: 225px;
   text-align: left;
 }
@@ -234,7 +216,7 @@ h4 {
 /* Skills Section Container */
 #skills {
   font-family: 'Nunito', sans-serif;
-  background-color: #16213e; /* Navy Blue */
+  background-color: #d3d3d3; /* Navy Blue */
 }
 
 /* Container for Skill Bars (Horizontal Layout) */
@@ -323,6 +305,7 @@ h4 {
   margin: 0;
   text-align: center;
 }
+
 #contact {  
   height: 100vh;
   display: flex;
@@ -332,40 +315,43 @@ h4 {
   text-align: center;
   padding: 2rem;
   border-bottom: 1px solid #ccc;
-  background-color: #222831; /* Charcoal */
+  background-color: #d3d3d3;
   font-family: 'Nunito', sans-serif;
+  position: relative;
 }
 
 .contact-container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  gap: 3rem;
+  align-items: flex-start;
   width: 100%;
   max-width: 1200px;
   flex-wrap: wrap;
+  position: relative;
 }
 
+/* === Left Column === */
 .contact-left {
   flex: 1;
+  position: relative;
+  top: 0px;         /* <-- Change this */
+  left: 0px;        /* <-- Change this */
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
   align-items: flex-start;
-  padding-left: 2rem;
+  gap: 2rem;
 }
 
+/* === Contact Text === */
 .contact-text {
-  position: relative;
-  top: 30px;
-  left: 200px;
   font-size: 1.2rem;
   font-weight: 100;
-  color: #f0f0f0;
-  margin-top: 2rem;
+  color: #333;
+  max-width: 600px;
   text-align: right;
-  max-width: 400px;
+  position: relative;
+  top: 0px;        /* <-- Adjust position */
+  left: 0px;
 }
 
 .contact-text h3 {
@@ -375,78 +361,76 @@ h4 {
 }
 
 .contact-text p {
-  font-size: 1rem;
-  font-weight: 100;
+  font-size: 1.5rem;
   color: #555;
 }
 
+/* === Contact Icons Container === */
 .contact-icons {
-  display: flex;
   position: relative;
-  top: -30px;
-  left: 450px;
-  gap: 1.3rem;
-  margin-top: 300px;
-  padding-bottom: 2rem;
+  top: 0px;        /* <-- Adjust position */
+  left: 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
-.contact-icons a {
+/* === Social Group (Insta & Facebook) === */
+.social-group {
+  position: relative;
+  top: 230px;        /* <-- Adjust group separately */
+  left: 533px;
+  display: flex;
+  gap: 1.5rem;
+}
+
+/* === Other Icons Group === */
+.other-icons-group {
+  position: relative;
+  top: 220px;        /* <-- Adjust separately */
+  left: 450px;
+  display: flex;
+  gap: 1.3rem;
+}
+
+/* === Shared Icon Styles === */
+.social-icon a,
+.other-icons-group a {
   font-size: 1.3rem;
   color: #707070;
   transition: color 0.3s ease;
+  text-decoration: none;
 }
 
-.contact-icons a:hover {
+.social-icon a:hover,
+.other-icons-group a:hover {
   color: #000;
 }
 
+/* === Right Column (Image) === */
 .contact-right {
   flex: 1;
+  position: relative;
+  top: 0px;        /* <-- Adjust */
+  left: 0px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .contact-right img {
-  width: 350px;
+  width: 450px;
   max-width: 100%;
   height: auto;
   object-fit: cover;
 }
 
+/* === Optional Text Box === */
 .social-text-box {
   font-family: 'Nunito', sans-serif;
   font-size: 1.2rem;
   color: #707070;
   position: relative;
-  top: 400px;
-  left: -200px;
-}
-
-.social-instagram,
-.social-facebook {
-  position: relative;
-  top: 20px;
-  font-size: 1.3rem;
-}
-
-.social-instagram {
-  left: 25px; /* Adjust for Instagram icon position */
-  top: 325px;
-}
-
-.social-facebook {
-  left: 60px; /* Adjust for Facebook icon position */
-  top: 297px;
-}
-
-.social-instagram a,
-.social-facebook a {
-  color: #707070;
-  transition: color 0.3s;
-}
-
-.social-instagram a:hover,
-.social-facebook a:hover {
-  color: #000;
+  top: 0px;       /* <-- Adjust */
+  left: 0px;
 }
