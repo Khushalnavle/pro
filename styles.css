@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
 
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> ea5e4ee3ac12521772aa98941901751f596cc8de
 /* General Reset */
 * {
     margin: 0;
@@ -9,8 +14,13 @@
 
   body {
     font-family: 'Roboto', 'Open Sans', 'Lato', 'Montserrat', 'Poppins', 'Inter', sans-serif;
+<<<<<<< HEAD
+    background: #f5f5f5;
+    color: #333;
+=======
     background: #000000;
     color: #ffffff;
+>>>>>>> ea5e4ee3ac12521772aa98941901751f596cc8de
     scroll-behavior: smooth;
   }
 
@@ -85,13 +95,21 @@
   #live-time {
     font-size: 1.2rem;
     font-weight: 100;
+<<<<<<< HEAD
+    color: #ffffff;
+=======
     color: #333;
+>>>>>>> ea5e4ee3ac12521772aa98941901751f596cc8de
   }
   
   #live-date {
     font-size: 0.8rem;
     font-weight: 500;
+<<<<<<< HEAD
+    color: #cccccc;
+=======
     color: #777;
+>>>>>>> ea5e4ee3ac12521772aa98941901751f596cc8de
   }
 
   .home-content {
