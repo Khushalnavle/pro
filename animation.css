@@ -1,7 +1,7 @@
 /* Hologram effect for the logo */
 #svg {
-    height: 400px;
-    width: 400px;
+    height: 500px;
+    width: 500px;
     stroke-width: 2px;
     fill: none;
     stroke: #707070; /* Primary page color */
