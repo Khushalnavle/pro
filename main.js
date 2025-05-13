@@ -1,4 +1,3 @@
-HEAD
 // Live Time and Date
 function updateTime() {
     const now = new Date();

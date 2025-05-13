@@ -7,14 +7,18 @@
   <title>My Portfolio</title>
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="animation.css" />
+  <link rel="stylesheet" href="background.css" />
 </head>
 <body>
 
+  <canvas id="gradient-canvas"></canvas>
+  <script src="gradient-background.js"></script>
+  
   <!-- Vertical Button Layout -->
   <div class="side-nav">
-    <a href="#home" class="side-btn">Home</a>
     <a href="#about" class="side-btn">About</a>
     <a href="#skills" class="side-btn">Skills</a>
+    <a href="#projects" class="side-btn">Projects</a>
     <a href="#contact" class="side-btn">Contact</a>
   </div>
 
@@ -94,6 +98,30 @@
       </div>
     </div>
   </section>
+
+  <section id="projects">
+  <div class="projects-container">
+    <h2 class="section-title">My Projects</h2>
+    
+      <div class="project-grid">
+        <div class="project-card">
+          <h3>Project One</h3>
+          <p>Short description of the project goes here. What tech you used, what it does, etc.</p>
+        </div>
+
+        <div class="project-card">
+          <h3>Project Two</h3>
+          <p>Another project summary with key details. You can link to it or show a screenshot.</p>
+        </div>
+
+        <div class="project-card">
+          <h3>Project Three</h3>
+          <p>Brief highlight of what makes this project unique or interesting.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
 
   <section id="contact">
     <div class="contact-container">

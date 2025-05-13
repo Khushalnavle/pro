@@ -2,125 +2,190 @@
 
 /* General Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  body {
-    font-family: 'Roboto', 'Open Sans', 'Lato', 'Montserrat', 'Poppins', 'Inter', sans-serif;
-    background: #f5f5f5;
-    color: #d3d3d3;
-    scroll-behavior: smooth;
-  }
+/* Body Styling */
+body {
+  font-family: 'Roboto', 'Open Sans', 'Lato', 'Montserrat', 'Poppins', 'Inter', sans-serif;
+  background: #f5f5f5;
+  color: #d3d3d3;
+  scroll-behavior: smooth;
+  min-height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
-  /* Full-Screen Section Styling */
-  section {
-    height: 100vh; /* full screen */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: clamp(1.5rem, 5vw, 3rem); /* responsive font */
-    text-align: center;
-    padding: 1rem;
-    border-bottom: 1px solid #ccc;
-  }
-  
-  /* Vertical Button Layout on Left Side */
-  .side-nav {
-    position: fixed;
-    left: 10px;
-    top: 2%;
-    display: flex;
-    flex-direction: column;
-    gap: 0px;
-  }
-  
-  .side-btn {
-    color: rgb(0, 0, 0);
-    padding: 10px 20px;
-    font-size: 15px;
-    font-family: 'Nunito', sans-serif;
-    text-align: left;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.5s ease;
-  }
-  
-  .side-btn:hover {
-    background-color: #939393;
-  }
-  
-  /* Personal Info Styles */
-  .personal-info {
-    position: absolute;
-    top: 10px;
-    right: 175px;
-    text-align: right;
-    font-family: 'Nunito', sans-serif;
-  }
-  
-  
-  .personal-info h1 {
-    font-size: 1.2rem;
-    font-weight: 100;
-    color: #333;
-  }
-  
-  .personal-info h2 {
-    font-size: 0.8rem;
-    font-weight: 50;
-    color: #777;
-  }
-  
-  /* Live Time Styles */
-  .live-time {
-    position: absolute;
-    top: 10px;
-    right: 25px;
-    text-align: left;
-    font-family: 'Nunito', sans-serif;
-  }
-  
-  #live-time {
-    font-size: 1.2rem;
-    font-weight: 100;
-    color: #ffffff;
-  }
-  
-  #live-date {
-    font-size: 0.8rem;
-    font-weight: 500;
-    color: #cccccc;
-  }
+/* Full-Screen Section Styling */
+section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(1.5rem, 5vw, 3rem);
+  text-align: center;
+  padding: 1rem;
+}
 
-  .home-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  
+/* Side Navigation */
+.side-nav {
+  position: fixed;
+  left: 10px;
+  top: 2%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Added gap for better spacing */
+  z-index: 999;
+}
 
-  #home {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background-color: #d3d3d3;
-  }
-  
-  .logo-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-  }
-  
-/* About Section Styling */
+/* Button Style */
+.side-btn {
+  color: #d8cfc5; /* Ivory Mist */
+  padding: 10px 20px;
+  font-size: 15px;
+  font-family: 'Nunito', sans-serif;
+  text-align: left;
+  text-decoration: none;
+  border-radius: 5px;
+  background: transparent;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  transition:
+    transform 0.5s ease-out,  /* Smooth zoom transition */
+    color 0.5s ease-out,      /* Smooth color transition */
+    text-shadow 0.5s ease-out,/* Smooth text-shadow transition */
+    background 1s ease-out;  /* Smooth background transition */
+}
 
+/* Hover: RGB text, dark shadow, and zoom */
+.side-btn:hover {
+  background: linear-gradient(
+    90deg,
+    #6c7a89,  /* Faded Steel Blue (brighter to add a bit of pop) */
+    #4a2c32,  /* Deep Wine (slightly lighter for contrast) */
+    #3b3b3b,  /* Slate Grey (slightly brightened) */
+    #a8a29e,  /* Soft Champagne Taupe (adds a subtle light contrast) */
+    #b89a80,  /* Light Goldish Taupe (to brighten) */
+    #a8a29e,  /* Soft Champagne Taupe (softens the transition) */
+    #6c7a89,  /* Faded Steel Blue (bright cool tone) */
+    #4a2c32   /* Deep Wine (brightened for warmth) */
+  );
+  background-size: 300% 300%; /* Larger background for smoother movement */
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;  /* Ensure text is transparent for the background to show */
+  -webkit-text-fill-color: transparent;
+  animation: rgb-text 5s linear infinite;  /* Slower animation for smoothness */
+  text-shadow: 0 0 15px rgba(0, 0, 0, 0.6);  /* Enhanced shadow effect */
+  transform: scale(1.5);  /* Slight zoom-in */
+}
+
+/* RGB gradient animation */
+@keyframes rgb-text {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;  /* Smooth color transition halfway */
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Adding smooth un-hover effect */
+.side-btn:not(:hover) {
+  transition: 
+    transform 0.5s ease-out,   /* Smooth reverse of zoom */
+    text-shadow 0.5s ease-out,  /* Smooth text-shadow reverse */
+    color 0.5s ease-out,        /* Smooth color reverse */
+    background 1s ease-out;     /* Smooth background transition reverse */
+  transform: scale(1);  /* Zoom-out smoothly when not hovering */
+}
+
+/* Optional: Delay effect to make the return to normal even smoother */
+.side-btn {
+  transition-delay: 0s;
+}
+
+.side-btn:hover {
+  transition-delay: 0s;
+}
+
+
+/* Personal Info */
+.personal-info {
+  position: absolute;
+  top: 10px;
+  right: 200px;
+  text-align: right;
+  font-family: 'Nunito', sans-serif;
+}
+
+.personal-info h1 {
+  font-size: 1.5rem;
+  font-weight: 100;
+  color: #c9b2a2;
+}
+
+.personal-info h2 {
+  font-size: 0.8rem;
+  font-weight: 50;
+  color: #d8cfc5;
+}
+
+/* Live Time */
+.live-time {
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  text-align: left;
+  font-family: 'Nunito', sans-serif;
+}
+
+#live-time {
+  font-size: 1.5rem;
+  font-weight: 100;
+  color: #c9b2a2;
+}
+
+#live-date {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #d8cfc5;
+}
+
+/* Home Section */
+.home-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: transparent;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* About Section */
 #about {
-  background-color: #d3d3d3; /* Midnight Blue */
+  background-color: transparent;
 }
 
 .about-content {
@@ -128,24 +193,24 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  flex-direction: column; /* Stack photos and text vertically */
+  flex-direction: column;
 }
 
-/* Left Photo Styling */
 .photo-left {
   width: 175px;
   height: auto;
   overflow: hidden;
   position: absolute;
-  top: var(--left-photo-top, -300px); /* Customizable top position */
-  left: var(--left-photo-left, -450px); /* Customizable left position */
+  top: var(--left-photo-top, -300px);
+  left: var(--left-photo-left, -450px);
 }
 
-.photo-left img {
+.photo-left img,
+.photo-center img,
+.photo-right img {
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 2px;
   object-fit: cover;
 }
 
@@ -155,50 +220,32 @@
   overflow: hidden;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   position: absolute;
-  top: var(--center-photo-top, 10); /* Customizable top position */
+  top: var(--center-photo-top, 10);
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
 }
 
-
-.photo-center img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 0px;
-  object-fit: cover;
-}
-
-/* Right Photo Styling */
 .photo-right {
   width: 175px;
   height: auto;
   overflow: hidden;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   position: absolute;
-  bottom: var(--right-photo-bottom, -300px); /* Customizable bottom position */
-  right: var(--right-photo-right, -450px); /* Customizable right position */
-}
-
-.photo-right img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 0px;
-  object-fit: cover;
+  bottom: var(--right-photo-bottom, -300px);
+  right: var(--right-photo-right, -450px);
 }
 
 h3, h4 {
   position: absolute;
   font-size: 1.5rem;
   font-weight: 100;
-  color: #333;
+  color: #c9b2a2;
   font-family: 'Nunito', sans-serif;
-  width: 450px;           /* Set a fixed width */
+  width: 450px;
   line-height: 1.4;
   word-wrap: break-word;
-  white-space: normal;    /* Make sure text wraps normally */
+  white-space: normal;
 }
 
 h3 {
@@ -213,42 +260,37 @@ h4 {
   text-align: right;
 }
 
-/* Skills Section Container */
+/* Skills Section */
 #skills {
   font-family: 'Nunito', sans-serif;
-  background-color: #d3d3d3; /* Navy Blue */
+  background-color: transparent;
 }
 
-/* Container for Skill Bars (Horizontal Layout) */
 .skills-bar-container {
   display: flex;
-  justify-content: space-evenly; /* Space between the boxes. Change to 'center', 'flex-start', or 'flex-end' for different alignments */
-  gap: 3rem; /* Controls the space between each box. Adjust this for tighter or looser spacing */
-  flex-wrap: wrap; /* Ensures boxes wrap when space is insufficient (like on smaller screens) */
-  position: relative; /* This enables absolute positioning inside each box */
+  justify-content: space-evenly;
+  gap: 3rem;
+  flex-wrap: wrap;
+  position: relative;
 }
 
-/* Base Style for Skill Box (applies to all) */
 .skills-bar {
   background-color: #000000;
   padding: 1rem;
   border-radius: 5px;
   margin: 1px;
-  position: absolute; 
-
+  position: absolute;
   display: flex;
-  flex-direction: column;       /* Stack content vertically */
-  justify-content: center;      /* Center vertically */
-  align-items: center;          /* Center horizontally */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-
-  height: 200px;                /* You can adjust as needed */
+  height: 200px;
   min-height: 75px;
   max-height: 400px;
   width: 100%;
 }
 
-/* Text customization */
 .skill-text {
   position: absolute;
   font-size: 1.2rem;
@@ -256,39 +298,29 @@ h4 {
   color: #fff;
 }
 
-/* Custom classes for each individual box, so you can change size and position independently */
-
-/* Box 1 - Frontend */
-.skills-bar.box-1 {
-  flex: 1 1 20%; /* Adjust the width of the box (20% width) */
-  max-width: 100px; /* Maximum width for box 1 */
-  min-width: 900px; /* Minimum width for box 1 */
-  background-color: #000000; /* Example color */
-  top: -200px; /* Move box 1 down from the top */
-  left: -450px; /* Move box 1 from the left side */
-  height: 75px;
-}
-
-/* Box 2 - Backend */
-.skills-bar.box-2 {
-  flex: 1 1 20%; /* Adjust the width of the box (20% width) */
-  max-width: 100px; /* Maximum width for box 2 */
-  min-width: 900px; /* Minimum width for box 2 */
-  background-color: #000000; /* Example color */
-  top: -50px; /* Move box 2 down from the top */
-  left: -450px; /* Move box 2 from the left (centered) */
-  height: 75px;
-}
-
-/* Box 3 - Tools */
+.skills-bar.box-1,
+.skills-bar.box-2,
 .skills-bar.box-3 {
-  flex: 1 1 20%; /* Adjust the width of the box (20% width) */
-  max-width: 100px; /* Maximum width for box 3 */
-  min-width: 900px; /* Minimum width for box 3 */
-  background-color: #000000; /* Example color */
+  flex: 1 1 20%;
+  max-width: 100px;
+  min-width: 900px;
+  background-color: #000000;
   height: 75px;
-  top: 100px; /* Move box 3 down from the top */
-  left: -450px; /* Move box 3 from the right side */
+}
+
+.skills-bar.box-1 {
+  top: -200px;
+  left: -450px;
+}
+
+.skills-bar.box-2 {
+  top: -50px;
+  left: -450px;
+}
+
+.skills-bar.box-3 {
+  top: 100px;
+  left: -450px;
 }
 
 .skills-bar ul {
@@ -296,7 +328,7 @@ h4 {
   padding: 0;
   margin: 0;
   display: flex;
-  flex-direction: row;       /* Stack skills vertically */
+  flex-direction: row;
   gap: 0.3rem;
 }
 
@@ -306,7 +338,58 @@ h4 {
   text-align: center;
 }
 
-#contact {  
+/* Projects Section */
+#projects {
+  min-height: 100vh;
+  background-color: transparent;
+  padding: 5rem 2rem;
+  font-family: 'Nunito', sans-serif;
+}
+
+.projects-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  color: #333;
+  margin-bottom: 3rem;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+}
+
+.project-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+.project-card p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Contact Section */
+#contact {
   height: 100vh;
   display: flex;
   align-items: center;
@@ -315,7 +398,7 @@ h4 {
   text-align: center;
   padding: 2rem;
   border-bottom: 1px solid #ccc;
-  background-color: #d3d3d3;
+  background-color: transparent;
   font-family: 'Nunito', sans-serif;
   position: relative;
 }
@@ -330,19 +413,17 @@ h4 {
   position: relative;
 }
 
-/* === Left Column === */
 .contact-left {
   flex: 1;
   position: relative;
-  top: 0px;         /* <-- Change this */
-  left: 0px;        /* <-- Change this */
+  top: 0px;
+  left: 0px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 2rem;
 }
 
-/* === Contact Text === */
 .contact-text {
   font-size: 1.2rem;
   font-weight: 100;
@@ -350,7 +431,7 @@ h4 {
   max-width: 600px;
   text-align: right;
   position: relative;
-  top: 0px;        /* <-- Adjust position */
+  top: 0px;
   left: 0px;
 }
 
@@ -365,35 +446,31 @@ h4 {
   color: #555;
 }
 
-/* === Contact Icons Container === */
 .contact-icons {
   position: relative;
-  top: 0px;        /* <-- Adjust position */
+  top: 0px;
   left: 0px;
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
 
-/* === Social Group (Insta & Facebook) === */
 .social-group {
   position: relative;
-  top: 230px;        /* <-- Adjust group separately */
+  top: 230px;
   left: 533px;
   display: flex;
   gap: 1.5rem;
 }
 
-/* === Other Icons Group === */
 .other-icons-group {
   position: relative;
-  top: 220px;        /* <-- Adjust separately */
+  top: 220px;
   left: 450px;
   display: flex;
   gap: 1.3rem;
 }
 
-/* === Shared Icon Styles === */
 .social-icon a,
 .other-icons-group a {
   font-size: 1.3rem;
@@ -407,11 +484,10 @@ h4 {
   color: #000;
 }
 
-/* === Right Column (Image) === */
 .contact-right {
   flex: 1;
   position: relative;
-  top: 0px;        /* <-- Adjust */
+  top: 0px;
   left: 0px;
   display: flex;
   justify-content: center;
@@ -425,12 +501,12 @@ h4 {
   object-fit: cover;
 }
 
-/* === Optional Text Box === */
 .social-text-box {
   font-family: 'Nunito', sans-serif;
   font-size: 1.2rem;
+  font-weight: 100;
   color: #707070;
   position: relative;
-  top: 0px;       /* <-- Adjust */
-  left: 0px;
+  top: 500px;
+  left: -200px;
 }

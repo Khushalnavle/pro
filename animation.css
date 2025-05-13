@@ -1,17 +1,17 @@
 /* Hologram effect for the logo */
 #svg {
-    height: 200px;
-    width: 200px;
-    stroke-width: 1.5px;
+    height: 400px;
+    width: 400px;
+    stroke-width: 2px;
     fill: none;
-    stroke: #707070;
+    stroke: #707070; /* Primary page color */
     stroke-dasharray: 800;
     stroke-dashoffset: 800;
     animation:
         hologramStroke 8s ease-in-out infinite,
         hologramGlow 6s ease-in-out infinite,
         hologramShimmer 4s ease-in-out infinite;
-    filter: drop-shadow(0 0 10px rgba(112, 112, 112, 0.3));
+    filter: drop-shadow(0 0 4px #9db0c5);
     transform-origin: center;
 }
 
@@ -19,17 +19,17 @@
 @keyframes hologramStroke {
     0% {
         stroke-dashoffset: 800;
-        stroke: #707070;
+        stroke: #707070; /* Primary page color */
         opacity: 0.4;
     }
     50% {
         stroke-dashoffset: 0;
-        stroke: #888888;
+        stroke: #888888; /* Slightly lighter shade for the stroke */
         opacity: 1;
     }
     100% {
         stroke-dashoffset: 800;
-        stroke: #707070;
+        stroke: #707070; /* Primary page color */
         opacity: 0.4;
     }
 }
@@ -37,28 +37,21 @@
 /* Soft hologram glow pulse */
 @keyframes hologramGlow {
     0%, 100% {
-        filter: drop-shadow(0 0 10px rgba(112, 112, 112, 0.2));
+        filter: drop-shadow(0 0 10px rgba(112, 112, 112, 0.2)); /* Subtle glow */
     }
     50% {
-        filter: drop-shadow(0 0 20px rgba(112, 112, 112, 0.6));
+        filter: drop-shadow(0 0 20px rgba(112, 112, 112, 0.6)); /* Stronger glow at 50% */
     }
 }
 
 /* Shimmer sweep */
 @keyframes hologramShimmer {
-    0% {
-        stroke: #888888;
-    }
-    25% {
-        stroke: #707070;
-    }
-    50% {
-        stroke: #999999;
-    }
-    75% {
-        stroke: #707070;
-    }
-    100% {
-        stroke: #888888;
-    }
+  0%   { stroke: #a8a29e; }  /* Soft Champagne Taupe */
+  25%  { stroke: #c9b2a2; }  /* Dusty Rose Beige */
+  50%  { stroke: #d8cfc5; }  /* Ivory Mist */
+  75%  { stroke: #c9b2a2; }
+  100% { stroke: #a8a29e; }
 }
+
+
+
